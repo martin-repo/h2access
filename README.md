@@ -3,6 +3,17 @@ Helldivers 2 Accessibility App
 
 <img width="886" height="603" alt="image" src="https://github.com/user-attachments/assets/f2f24ac2-8cc3-4184-a89a-1b21abd7ac1a" />
 
+# Installation
+
+1. [Download zip-file](https://github.com/martin-repo/h2access/releases/latest/download/Helldivers2Accessibility-win-x64.zip)
+2. Extract it anywhere on your computer  
+3. Run `Helldivers2Accessibility.exe`
+
+### Requirements
+
+- Windows 10/11 (x64)
+- .NET 9 Runtime (included in the download)
+
 # Select Stratagems
 
 ### Automatically
