@@ -1,0 +1,1049 @@
+[
+  {
+    "name": "Airburst Rocket Launcher",
+    "code": [
+      "Down",
+      "Up",
+      "Up",
+      "Left",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 17,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Anti-Material Rifle",
+    "code": [
+      "Down",
+      "Left",
+      "Right",
+      "Up",
+      "Down"
+    ],
+    "category": "Supply",
+    "position": 5,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Anti-Personnel Minefield",
+    "code": [
+      "Down",
+      "Left",
+      "Up",
+      "Right"
+    ],
+    "category": "Defensive",
+    "position": 15,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 103
+  },
+  {
+    "name": "Anti-Tank Mines",
+    "code": [
+      "Down",
+      "Left",
+      "Up",
+      "Up"
+    ],
+    "category": "Defensive",
+    "position": 13,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 103
+  },
+  {
+    "name": "Arc Thrower",
+    "code": [
+      "Down",
+      "Right",
+      "Up",
+      "Left",
+      "Down"
+    ],
+    "category": "Supply",
+    "position": 13,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Autocannon",
+    "code": [
+      "Down",
+      "Left",
+      "Down",
+      "Up",
+      "Up",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 16,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Autocannon Sentry",
+    "code": [
+      "Down",
+      "Up",
+      "Right",
+      "Up",
+      "Left",
+      "Up"
+    ],
+    "category": "Defensive",
+    "position": 6,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 128
+  },
+  {
+    "name": "Ballistic Shield Backpack",
+    "code": [
+      "Down",
+      "Left",
+      "Down",
+      "Down",
+      "Up",
+      "Left"
+    ],
+    "category": "Supply",
+    "position": 27,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 257
+  },
+  {
+    "name": "Commando",
+    "code": [
+      "Down",
+      "Left",
+      "Up",
+      "Down",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 14,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 103
+  },
+  {
+    "name": "De-Escalator",
+    "code": [
+      "Left",
+      "Right",
+      "Up",
+      "Left",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 8,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Directional Shield",
+    "code": [
+      "Down",
+      "Up",
+      "Left",
+      "Right",
+      "Up",
+      "Up"
+    ],
+    "category": "Supply",
+    "position": 26,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 257
+  },
+  {
+    "name": "Eagle 110mm Rocket Pods",
+    "code": [
+      "Up",
+      "Right",
+      "Up",
+      "Left"
+    ],
+    "category": "Offensive",
+    "position": 15,
+    "deployment": "Airstrike",
+    "deploymentSeconds": 4,
+    "cooldownSeconds": 7
+  },
+  {
+    "name": "Eagle 500kg Bomb",
+    "code": [
+      "Up",
+      "Right",
+      "Down",
+      "Down",
+      "Down"
+    ],
+    "category": "Offensive",
+    "position": 13,
+    "deployment": "Airstrike",
+    "deploymentSeconds": 4,
+    "cooldownSeconds": 7
+  },
+  {
+    "name": "Eagle Airstrike",
+    "code": [
+      "Up",
+      "Right",
+      "Down",
+      "Right"
+    ],
+    "category": "Offensive",
+    "position": 16,
+    "deployment": "Airstrike",
+    "deploymentSeconds": 4,
+    "cooldownSeconds": 7
+  },
+  {
+    "name": "Eagle Cluster Bomb",
+    "code": [
+      "Up",
+      "Right",
+      "Down",
+      "Down",
+      "Right"
+    ],
+    "category": "Offensive",
+    "position": 17,
+    "deployment": "Airstrike",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 7
+  },
+  {
+    "name": "Eagle Napalm Airstrike",
+    "code": [
+      "Up",
+      "Right",
+      "Down",
+      "Up"
+    ],
+    "category": "Offensive",
+    "position": 18,
+    "deployment": "Airstrike",
+    "deploymentSeconds": 4,
+    "cooldownSeconds": 7
+  },
+  {
+    "name": "Eagle Smoke Strike",
+    "code": [
+      "Up",
+      "Right",
+      "Up",
+      "Down"
+    ],
+    "category": "Offensive",
+    "position": 19,
+    "deployment": "Airstrike",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 7
+  },
+  {
+    "name": "Eagle Strafing Run",
+    "code": [
+      "Up",
+      "Right",
+      "Right"
+    ],
+    "category": "Offensive",
+    "position": 14,
+    "deployment": "Airstrike",
+    "deploymentSeconds": 3,
+    "cooldownSeconds": 7
+  },
+  {
+    "name": "Emancipator Exosuit",
+    "code": [
+      "Left",
+      "Down",
+      "Right",
+      "Up",
+      "Left",
+      "Down",
+      "Up"
+    ],
+    "category": "Supply",
+    "position": 33,
+    "deployment": "Ground",
+    "deploymentSeconds": 11,
+    "cooldownSeconds": 370
+  },
+  {
+    "name": "EMS Mortar Sentry",
+    "code": [
+      "Down",
+      "Up",
+      "Right",
+      "Down",
+      "Right"
+    ],
+    "category": "Defensive",
+    "position": 7,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 154
+  },
+  {
+    "name": "Epoch",
+    "code": [
+      "Down",
+      "Left",
+      "Up",
+      "Left",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 6,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Expendable Anti-Tank",
+    "code": [
+      "Down",
+      "Down",
+      "Left",
+      "Up",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 15,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 60
+  },
+  {
+    "name": "Fast Recon Vehicle",
+    "code": [
+      "Left",
+      "Down",
+      "Right",
+      "Down",
+      "Right",
+      "Down",
+      "Up"
+    ],
+    "category": "Supply",
+    "position": 32,
+    "deployment": "Ground",
+    "deploymentSeconds": 11,
+    "cooldownSeconds": 912
+  },
+  {
+    "name": "Flame Sentry",
+    "code": [
+      "Down",
+      "Up",
+      "Right",
+      "Down",
+      "Up",
+      "Up"
+    ],
+    "category": "Defensive",
+    "position": 3,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 86
+  },
+  {
+    "name": "Flamethrower",
+    "code": [
+      "Down",
+      "Left",
+      "Up",
+      "Down",
+      "Up"
+    ],
+    "category": "Supply",
+    "position": 10,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Gas Mines",
+    "code": [
+      "Down",
+      "Left",
+      "Left",
+      "Right"
+    ],
+    "category": "Defensive",
+    "position": 14,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 103
+  },
+  {
+    "name": "Gatling Sentry",
+    "code": [
+      "Down",
+      "Up",
+      "Right",
+      "Left"
+    ],
+    "category": "Defensive",
+    "position": 1,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 128
+  },
+  {
+    "name": "Grenade Launcher",
+    "code": [
+      "Down",
+      "Left",
+      "Up",
+      "Left",
+      "Down"
+    ],
+    "category": "Supply",
+    "position": 7,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Grenadier Battlement",
+    "code": [
+      "Down",
+      "Right",
+      "Down",
+      "Left",
+      "Right"
+    ],
+    "category": "Defensive",
+    "position": 10,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 103
+  },
+  {
+    "name": "Guard Dog",
+    "code": [
+      "Down",
+      "Up",
+      "Left",
+      "Up",
+      "Right",
+      "Down"
+    ],
+    "category": "Supply",
+    "position": 29,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Guard Dog Breath",
+    "code": [
+      "Down",
+      "Up",
+      "Left",
+      "Up",
+      "Right",
+      "Up"
+    ],
+    "category": "Supply",
+    "position": 31,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Guard Dog K-9",
+    "code": [
+      "Down",
+      "Up",
+      "Left",
+      "Up",
+      "Right",
+      "Left"
+    ],
+    "category": "Supply",
+    "position": 28,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 456
+  },
+  {
+    "name": "Guard Dog Rover",
+    "code": [
+      "Down",
+      "Up",
+      "Left",
+      "Up",
+      "Right",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 30,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Heavy Machine Gun",
+    "code": [
+      "Down",
+      "Left",
+      "Up",
+      "Down",
+      "Down"
+    ],
+    "category": "Supply",
+    "position": 3,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "HMG Placement",
+    "code": [
+      "Down",
+      "Up",
+      "Left",
+      "Right",
+      "Right",
+      "Left"
+    ],
+    "category": "Defensive",
+    "position": 11,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 154
+  },
+  {
+    "name": "Hover Pack",
+    "code": [
+      "Down",
+      "Up",
+      "Up",
+      "Down",
+      "Left",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 23,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Incendiary Mines",
+    "code": [
+      "Down",
+      "Left",
+      "Left",
+      "Down"
+    ],
+    "category": "Defensive",
+    "position": 16,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 103
+  },
+  {
+    "name": "Jump Pack",
+    "code": [
+      "Down",
+      "Up",
+      "Up",
+      "Down",
+      "Up"
+    ],
+    "category": "Supply",
+    "position": 24,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Laser Cannon",
+    "code": [
+      "Down",
+      "Left",
+      "Down",
+      "Up",
+      "Left"
+    ],
+    "category": "Supply",
+    "position": 11,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Laser Sentry",
+    "code": [
+      "Down",
+      "Up",
+      "Right",
+      "Down",
+      "Up",
+      "Right"
+    ],
+    "category": "Defensive",
+    "position": 4,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 128
+  },
+  {
+    "name": "Machine Gun",
+    "code": [
+      "Down",
+      "Left",
+      "Down",
+      "Up",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 1,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Machine Gun Sentry",
+    "code": [
+      "Down",
+      "Up",
+      "Right",
+      "Right",
+      "Up"
+    ],
+    "category": "Defensive",
+    "position": 2,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 77
+  },
+  {
+    "name": "Mortar Sentry",
+    "code": [
+      "Down",
+      "Up",
+      "Right",
+      "Right",
+      "Down"
+    ],
+    "category": "Defensive",
+    "position": 8,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 154
+  },
+  {
+    "name": "Orbital 120mm HE Barrage",
+    "code": [
+      "Right",
+      "Right",
+      "Down",
+      "Left",
+      "Right",
+      "Down"
+    ],
+    "category": "Offensive",
+    "position": 5,
+    "deployment": "Orbital",
+    "deploymentSeconds": 7,
+    "cooldownSeconds": 154
+  },
+  {
+    "name": "Orbital 380mm HE Barrage",
+    "code": [
+      "Right",
+      "Down",
+      "Up",
+      "Up",
+      "Left",
+      "Down",
+      "Down"
+    ],
+    "category": "Offensive",
+    "position": 7,
+    "deployment": "Orbital",
+    "deploymentSeconds": 8,
+    "cooldownSeconds": 205
+  },
+  {
+    "name": "Orbital Airburst Strike",
+    "code": [
+      "Right",
+      "Right",
+      "Right"
+    ],
+    "category": "Offensive",
+    "position": 3,
+    "deployment": "Orbital",
+    "deploymentSeconds": 4,
+    "cooldownSeconds": 86
+  },
+  {
+    "name": "Orbital EMS Strike",
+    "code": [
+      "Right",
+      "Right",
+      "Left",
+      "Down"
+    ],
+    "category": "Offensive",
+    "position": 10,
+    "deployment": "Orbital",
+    "deploymentSeconds": 4,
+    "cooldownSeconds": 64
+  },
+  {
+    "name": "Orbital Gas Strike",
+    "code": [
+      "Right",
+      "Right",
+      "Down",
+      "Right"
+    ],
+    "category": "Offensive",
+    "position": 11,
+    "deployment": "Orbital",
+    "deploymentSeconds": 4,
+    "cooldownSeconds": 64
+  },
+  {
+    "name": "Orbital Gatling Barrage",
+    "code": [
+      "Right",
+      "Down",
+      "Left",
+      "Up",
+      "Up"
+    ],
+    "category": "Offensive",
+    "position": 2,
+    "deployment": "Orbital",
+    "deploymentSeconds": 2,
+    "cooldownSeconds": 60
+  },
+  {
+    "name": "Orbital Laser",
+    "code": [
+      "Right",
+      "Down",
+      "Up",
+      "Right",
+      "Down"
+    ],
+    "category": "Offensive",
+    "position": 9,
+    "deployment": "Orbital",
+    "deploymentSeconds": 1,
+    "cooldownSeconds": 257
+  },
+  {
+    "name": "Orbital Napalm Barrage",
+    "code": [
+      "Right",
+      "Right",
+      "Down",
+      "Left",
+      "Right",
+      "Up"
+    ],
+    "category": "Offensive",
+    "position": 4,
+    "deployment": "Orbital",
+    "deploymentSeconds": 7,
+    "cooldownSeconds": 205
+  },
+  {
+    "name": "Orbital Precision Strike",
+    "code": [
+      "Right",
+      "Right",
+      "Up"
+    ],
+    "category": "Offensive",
+    "position": 1,
+    "deployment": "Orbital",
+    "deploymentSeconds": 4,
+    "cooldownSeconds": 77
+  },
+  {
+    "name": "Orbital Railcannon Strike",
+    "code": [
+      "Right",
+      "Up",
+      "Down",
+      "Down",
+      "Right"
+    ],
+    "category": "Offensive",
+    "position": 8,
+    "deployment": "Orbital",
+    "deploymentSeconds": 0,
+    "cooldownSeconds": 180
+  },
+  {
+    "name": "Orbital Smoke Strike",
+    "code": [
+      "Right",
+      "Right",
+      "Down",
+      "Up"
+    ],
+    "category": "Offensive",
+    "position": 12,
+    "deployment": "Orbital",
+    "deploymentSeconds": 4,
+    "cooldownSeconds": 86
+  },
+  {
+    "name": "Orbital Walking Barrage",
+    "code": [
+      "Right",
+      "Right",
+      "Down",
+      "Left",
+      "Right",
+      "Down"
+    ],
+    "category": "Offensive",
+    "position": 6,
+    "deployment": "Orbital",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 205
+  },
+  {
+    "name": "Patriot Exosuit",
+    "code": [
+      "Left",
+      "Down",
+      "Right",
+      "Up",
+      "Left",
+      "Down",
+      "Down"
+    ],
+    "category": "Supply",
+    "position": 34,
+    "deployment": "Ground",
+    "deploymentSeconds": 11,
+    "cooldownSeconds": 370
+  },
+  {
+    "name": "Quasar Cannon",
+    "code": [
+      "Down",
+      "Down",
+      "Up",
+      "Left",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 12,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Railgun",
+    "code": [
+      "Down",
+      "Right",
+      "Down",
+      "Up",
+      "Left",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 4,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Recoilless Rifle",
+    "code": [
+      "Down",
+      "Left",
+      "Right",
+      "Right",
+      "Left"
+    ],
+    "category": "Supply",
+    "position": 20,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Rocket Sentry",
+    "code": [
+      "Down",
+      "Up",
+      "Right",
+      "Right",
+      "Left"
+    ],
+    "category": "Defensive",
+    "position": 5,
+    "deployment": "Ground",
+    "deploymentSeconds": 4,
+    "cooldownSeconds": 128
+  },
+  {
+    "name": "Shield Generator Pack",
+    "code": [
+      "Down",
+      "Down",
+      "Left",
+      "Right",
+      "Left",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 25,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Shield Generator Relay",
+    "code": [
+      "Down",
+      "Up",
+      "Left",
+      "Right",
+      "Left",
+      "Down"
+    ],
+    "category": "Defensive",
+    "position": 9,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 77
+  },
+  {
+    "name": "Spear",
+    "code": [
+      "Down",
+      "Down",
+      "Up",
+      "Down",
+      "Down"
+    ],
+    "category": "Supply",
+    "position": 18,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Stalwart",
+    "code": [
+      "Down",
+      "Left",
+      "Down",
+      "Up",
+      "Up",
+      "Left"
+    ],
+    "category": "Supply",
+    "position": 2,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Sterilizer",
+    "code": [
+      "Down",
+      "Left",
+      "Up",
+      "Down",
+      "Left"
+    ],
+    "category": "Supply",
+    "position": 9,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Supply Pack",
+    "code": [
+      "Down",
+      "Left",
+      "Down",
+      "Up",
+      "Up",
+      "Down"
+    ],
+    "category": "Supply",
+    "position": 21,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Tesla Tower",
+    "code": [
+      "Down",
+      "Up",
+      "Right",
+      "Up",
+      "Left",
+      "Right"
+    ],
+    "category": "Defensive",
+    "position": 12,
+    "deployment": "Ground",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 103
+  },
+  {
+    "name": "W.A.S.P. Launcher",
+    "code": [
+      "Down",
+      "Down",
+      "Up",
+      "Down",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 19,
+    "deployment": "Weapon",
+    "deploymentSeconds": 5,
+    "cooldownSeconds": 410
+  },
+  {
+    "name": "Warp Pack",
+    "code": [
+      "Down",
+      "Left",
+      "Right",
+      "Down",
+      "Left",
+      "Right"
+    ],
+    "category": "Supply",
+    "position": 22,
+    "deployment": "Backpack",
+    "deploymentSeconds": 10,
+    "cooldownSeconds": 410
+  }
+]

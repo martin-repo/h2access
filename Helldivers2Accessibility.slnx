@@ -1,0 +1,9 @@
+﻿<Solution>
+  <Folder Name="/Solution Items/">
+    <Project Path="Helldivers2Accessibility\Helldivers2Accessibility.csproj" Type="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}" Id="{414B679D-1EC9-4AAE-9CE8-D9A7485AEE84}" />
+  </Folder>
+  <Properties>
+    <Property Name="Configuration|Platform" Value="Debug|Any CPU" />
+    <Property Name="Configuration|Platform" Value="Release|Any CPU" />
+  </Properties>
+</Solution>

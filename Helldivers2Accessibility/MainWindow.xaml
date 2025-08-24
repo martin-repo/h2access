@@ -1,0 +1,387 @@
+<Window x:Class="Helldivers2Accessibility.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Helldivers 2 Accessibility"
+        ResizeMode="NoResize"
+        Height="610"
+        Width="900"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Header with Title and Clock -->
+        <Grid Grid.Row="0" Grid.ColumnSpan="3" Margin="0,0,0,30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Main Title (centered across all columns) -->
+            <TextBlock Grid.Column="0" Grid.ColumnSpan="3"
+                       Text="Stratagem Launcher"
+                       Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+
+            <!-- Clock (positioned in right column) -->
+            <StackPanel Grid.Column="2"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,15,0">
+                <TextBlock Name="ClockText"
+                           Text="00:00"
+                           FontSize="20"
+                           FontWeight="Medium"
+                           VerticalAlignment="Center"
+                           Foreground="{DynamicResource MaterialDesignBody}" />
+            </StackPanel>
+        </Grid>
+
+        <!-- Left Side: Normal Macros -->
+        <materialDesign:Card Grid.Row="1" Grid.Column="0" Padding="20" Margin="10" MouseMove="OnLoadoutMouseMove">
+            <StackPanel>
+                <TextBlock Name="LoadoutStratagemsHeader"
+                           Text="Loadout Stratagems (LB)"
+                           Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20" />
+
+                <!-- Diamond Layout for A, B, X, Y buttons -->
+                <Grid Width="320" Height="320" HorizontalAlignment="Center">
+                    <!-- Y Button (Top) -->
+                    <StackPanel Name="NormalY"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                Margin="0,10,0,0"
+                                MouseLeftButtonDown="NormalButton_Click"
+                                Cursor="Hand">
+                        <Border Name="BorderNormalY" Width="80" Height="80"
+                                CornerRadius="8"
+                                Background="{DynamicResource MaterialDesignCardBackground}"
+                                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                BorderThickness="2">
+                            <Grid>
+                                <Image Name="ImageNormalY" Width="70" Height="70"
+                                       Stretch="Uniform" />
+                                <Rectangle Name="NormalYTimerBackground"
+                                           Visibility="Collapsed"
+                                           Height="28"
+                                           Fill="Gray"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Stretch"
+                                           VerticalAlignment="Center" />
+                                <TextBlock Name="NormalYTimerForeground"
+                                           Visibility="Collapsed"
+                                           Text="000"
+                                           FontSize="24"
+                                           FontWeight="Bold"
+                                           Foreground="Yellow"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           TextAlignment="Center" />
+                            </Grid>
+                        </Border>
+                        <Image Source="/Resources/Controller/Y.png" Width="25" Height="25"
+                               HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+
+                    <!-- X Button (Left) -->
+                    <StackPanel Name="NormalX"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10,0,0,0"
+                                MouseLeftButtonDown="NormalButton_Click"
+                                Cursor="Hand">
+                        <Border Name="BorderNormalX" Width="80" Height="80"
+                                CornerRadius="8"
+                                Background="{DynamicResource MaterialDesignCardBackground}"
+                                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                BorderThickness="2">
+                            <Grid>
+                                <Image Name="ImageNormalX" Width="70" Height="70"
+                                       Stretch="Uniform" />
+                                <Rectangle Name="NormalXTimerBackground"
+                                           Visibility="Collapsed"
+                                           Height="28"
+                                           Fill="Gray"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Stretch"
+                                           VerticalAlignment="Center" />
+                                <TextBlock Name="NormalXTimerForeground"
+                                           Visibility="Collapsed"
+                                           Text="000"
+                                           FontSize="24"
+                                           FontWeight="Bold"
+                                           Foreground="Yellow"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           TextAlignment="Center" />
+                            </Grid>
+                        </Border>
+                        <Image Source="/Resources/Controller/X.png" Width="25" Height="25"
+                               HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+
+                    <!-- B Button (Right) -->
+                    <StackPanel Name="NormalB"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Margin="0,0,10,0"
+                                MouseLeftButtonDown="NormalButton_Click"
+                                Cursor="Hand">
+                        <Border Name="BorderNormalB" Width="80" Height="80"
+                                CornerRadius="8"
+                                Background="{DynamicResource MaterialDesignCardBackground}"
+                                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                BorderThickness="2">
+                            <Grid>
+                                <Image Name="ImageNormalB" Width="70" Height="70"
+                                       Stretch="Uniform" />
+                                <Rectangle Name="NormalBTimerBackground"
+                                           Visibility="Collapsed"
+                                           Height="28"
+                                           Fill="Gray"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Stretch"
+                                           VerticalAlignment="Center" />
+                                <TextBlock Name="NormalBTimerForeground"
+                                           Visibility="Collapsed"
+                                           Text="000"
+                                           FontSize="24"
+                                           FontWeight="Bold"
+                                           Foreground="Yellow"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           TextAlignment="Center" />
+                            </Grid>
+                        </Border>
+                        <Image Source="/Resources/Controller/B.png" Width="25" Height="25"
+                               HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+
+                    <!-- A Button (Bottom) -->
+                    <StackPanel Name="NormalA"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Bottom"
+                                Margin="0,0,0,10"
+                                MouseLeftButtonDown="NormalButton_Click"
+                                Cursor="Hand">
+                        <Border Name="BorderNormalA" Width="80" Height="80"
+                                CornerRadius="8"
+                                Background="{DynamicResource MaterialDesignCardBackground}"
+                                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                BorderThickness="2">
+                            <Grid>
+                                <Image Name="ImageNormalA" Width="70" Height="70"
+                                       Stretch="Uniform" />
+                                <Rectangle Name="NormalATimerBackground"
+                                           Visibility="Collapsed"
+                                           Height="28"
+                                           Fill="Gray"
+                                           Opacity="0.8"
+                                           HorizontalAlignment="Stretch"
+                                           VerticalAlignment="Center" />
+                                <TextBlock Name="NormalATimerForeground"
+                                           Visibility="Collapsed"
+                                           Text="000"
+                                           FontSize="24"
+                                           FontWeight="Bold"
+                                           Foreground="Yellow"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           TextAlignment="Center" />
+                            </Grid>
+                        </Border>
+                        <Image Source="/Resources/Controller/A.png" Width="25" Height="25"
+                               HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <!-- Vertical Separator -->
+        <Separator Grid.Row="1" Grid.Column="1"
+                   Style="{StaticResource MaterialDesignLightSeparator}"
+                   Margin="0,20" />
+
+        <!-- Right Side: Shift Modifier Macros -->
+        <materialDesign:Card Grid.Row="1" Grid.Column="2" Padding="20" Margin="10" MouseMove="OnMissionMouseMove">
+            <StackPanel>
+                <TextBlock Name="MissionStratagemsHeader"
+                           Text="Mission Stratagems (LB + RB)"
+                           Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20" />
+
+                <!-- Diamond Layout for A, B, X, Y buttons with shift modifier -->
+                <Grid Width="320" Height="320" HorizontalAlignment="Center">
+                    <!-- Y Button (Top) -->
+                    <StackPanel Name="ShiftY"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                Margin="0,10,0,0"
+                                Tag="Reinforce">
+                        <Border Width="80" Height="80"
+                                CornerRadius="8"
+                                Background="{DynamicResource MaterialDesignCardBackground}"
+                                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                BorderThickness="2">
+                            <Image Name="ImageShiftY" Source="/Resources/Stratagems/Reinforce.png" Width="70"
+                                   Height="70"
+                                   Stretch="Uniform" />
+                        </Border>
+                        <Image Source="/Resources/Controller/Y.png" Width="25" Height="25"
+                               HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+
+                    <!-- X Button (Left) -->
+                    <StackPanel Name="ShiftX"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Margin="10,0,0,0"
+                                Tag="Resupply">
+                        <Border Width="80" Height="80"
+                                CornerRadius="8"
+                                Background="{DynamicResource MaterialDesignCardBackground}"
+                                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                BorderThickness="2">
+                            <Image Name="ImageShiftX" Source="/Resources/Stratagems/Resupply.png" Width="70"
+                                   Height="70"
+                                   Stretch="Uniform" />
+                        </Border>
+                        <Image Source="/Resources/Controller/X.png" Width="25" Height="25"
+                               HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+
+                    <!-- B Button (Right) -->
+                    <StackPanel Name="ShiftB"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Margin="0,0,10,0"
+                                Tag="Eagle Rearm">
+                        <Border Width="80" Height="80"
+                                CornerRadius="8"
+                                Background="{DynamicResource MaterialDesignCardBackground}"
+                                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                BorderThickness="2">
+                            <Image Name="ImageShiftB" Source="/Resources/Stratagems/EagleRearm.png" Width="70"
+                                   Height="70"
+                                   Stretch="Uniform" />
+                        </Border>
+                        <Image Source="/Resources/Controller/B.png" Width="25" Height="25"
+                               HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+
+                    <!-- A Button (Bottom) -->
+                    <StackPanel Name="ShiftA"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Bottom"
+                                Margin="0,0,0,10"
+                                Tag="Hellbomb">
+                        <Border Width="80" Height="80"
+                                CornerRadius="8"
+                                Background="{DynamicResource MaterialDesignCardBackground}"
+                                BorderBrush="{DynamicResource MaterialDesignDivider}"
+                                BorderThickness="2">
+                            <Image Name="ImageShiftA" Source="/Resources/Stratagems/Hellbomb.png" Width="70"
+                                   Height="70"
+                                   Stretch="Uniform" />
+                        </Border>
+                        <Image Source="/Resources/Controller/A.png" Width="25" Height="25"
+                               HorizontalAlignment="Center" Margin="0,5,0,0" />
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <!-- Status Bar -->
+        <TextBlock Grid.Column="0"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="3"
+                   Text="Choose stratagems at the loadout then Press LT + RT + Y to snapshot them"
+                   FontSize="12pt"
+                   Name="StatusText"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Margin="0,20,0,0"
+                   Style="{StaticResource MaterialDesignCaptionTextBlock}" />
+
+        <Grid Name="StratagemSelectorOverlay"
+              Grid.Row="0"
+              Grid.RowSpan="3"
+              Grid.Column="0"
+              Grid.ColumnSpan="3"
+              Background="{DynamicResource MaterialDesignPaper}"
+              Visibility="Collapsed"
+              MouseMove="OnOverlayMouseMove">
+            <materialDesign:Card Margin="10" Padding="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0"
+                               Name="StratagemOverlayHeader"
+                               Text="Select Stratagem"
+                               Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,30" />
+
+                    <ScrollViewer Grid.Row="1"
+                                  HorizontalScrollBarVisibility="Disabled"
+                                  VerticalScrollBarVisibility="Auto">
+                        <StackPanel Orientation="Vertical">
+
+                            <TextBlock Text="Offensive"
+                                       Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                       Margin="0,0,0,10"
+                                       HorizontalAlignment="Center" />
+                            <WrapPanel Name="OffensiveStratagemList"
+                                       Orientation="Horizontal"
+                                       Margin="0,0,0,30" />
+
+                            <TextBlock Text="Supply"
+                                       Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                       Margin="0,0,0,10"
+                                       HorizontalAlignment="Center" />
+                            <WrapPanel Name="SupplyStratagemList"
+                                       Orientation="Horizontal"
+                                       Margin="0,0,0,30" />
+
+                            <TextBlock Text="Defensive"
+                                       Style="{StaticResource MaterialDesignSubtitle1TextBlock}"
+                                       Margin="0,0,0,10"
+                                       HorizontalAlignment="Center" />
+                            <WrapPanel Name="DefensiveStratagemList"
+                                       Orientation="Horizontal"
+                                       Margin="0,0,0,30" />
+
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+    </Grid>
+</Window>

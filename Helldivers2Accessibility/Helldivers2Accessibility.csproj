@@ -1,0 +1,341 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0-windows</TargetFramework>
+        <UseWPF>true</UseWPF>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MaterialDesignThemes" Version="5.2.1"/>
+        <PackageReference Include="Serilog" Version="4.3.0"/>
+        <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0"/>
+        <PackageReference Include="System.Drawing.Common" Version="9.0.8"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Resources\Controller\A.png"/>
+        <Resource Include="Resources\Controller\A.png"/>
+        <None Remove="Resources\Controller\B.png"/>
+        <Resource Include="Resources\Controller\B.png"/>
+        <None Remove="Resources\Controller\DPad_Down.png"/>
+        <Resource Include="Resources\Controller\DPad_Down.png"/>
+        <None Remove="Resources\Controller\DPad_Left.png"/>
+        <Resource Include="Resources\Controller\DPad_Left.png"/>
+        <None Remove="Resources\Controller\DPad_Right.png"/>
+        <Resource Include="Resources\Controller\DPad_Right.png"/>
+        <None Remove="Resources\Controller\DPad_UP.png"/>
+        <Resource Include="Resources\Controller\DPad_UP.png"/>
+        <None Remove="Resources\Controller\L3.png"/>
+        <Resource Include="Resources\Controller\L3.png"/>
+        <None Remove="Resources\Controller\LB.png"/>
+        <Resource Include="Resources\Controller\LB.png"/>
+        <None Remove="Resources\Controller\LT.png"/>
+        <Resource Include="Resources\Controller\LT.png"/>
+        <None Remove="Resources\Controller\R3.png"/>
+        <Resource Include="Resources\Controller\R3.png"/>
+        <None Remove="Resources\Controller\RB.png"/>
+        <Resource Include="Resources\Controller\RB.png"/>
+        <None Remove="Resources\Controller\RT.png"/>
+        <Resource Include="Resources\Controller\RT.png"/>
+        <None Remove="Resources\Controller\Select.png"/>
+        <Resource Include="Resources\Controller\Select.png"/>
+        <None Remove="Resources\Controller\Start.png"/>
+        <Resource Include="Resources\Controller\Start.png"/>
+        <None Remove="Resources\Controller\X.png"/>
+        <Resource Include="Resources\Controller\X.png"/>
+        <None Remove="Resources\Controller\Y.png"/>
+        <Resource Include="Resources\Controller\Y.png"/>
+        <None Remove="Resources\Stratagems\EagleRearm.png"/>
+        <Resource Include="Resources\Stratagems\EagleRearm.png"/>
+        <None Remove="Resources\Stratagems\Hellbomb.png"/>
+        <Resource Include="Resources\Stratagems\Hellbomb.png"/>
+        <None Remove="Resources\Stratagems\Reinforce.png"/>
+        <Resource Include="Resources\Stratagems\Reinforce.png"/>
+        <None Remove="Resources\Stratagems\Resupply.png"/>
+        <Resource Include="Resources\Stratagems\Resupply.png"/>
+        <None Remove="Resources\Stratagems\Unknown.png"/>
+        <EmbeddedResource Include="Resources\Stratagems\UnknownStratagem.png"/>
+        <None Remove="Resources\Stratagems.json"/>
+        <EmbeddedResource Include="Resources\StratagemCodes.json"/>
+        <None Update="Resources\StratagemImages\Airburst Rocket Launcher.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Airburst Rocket Launcher.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Anti-Material Rifle.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Anti-Material Rifle.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Anti-Personnel Minefield.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Anti-Personnel Minefield.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Anti-Tank Mines.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Anti-Tank Mines.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Arc Thrower.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Arc Thrower.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Autocannon.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Autocannon.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Autocannon Sentry.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Autocannon Sentry.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Ballistic Shield Backpack.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Ballistic Shield Backpack.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Commando.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Commando.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\De-Escalator.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\De-Escalator.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Directional Shield.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Directional Shield.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Eagle Airstrike.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Eagle Airstrike.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Eagle Cluster Bomb.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Eagle Cluster Bomb.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Eagle Napalm Airstrike.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Eagle Napalm Airstrike.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Eagle Smoke Strike.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Eagle Smoke Strike.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Eagle Strafing Run.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Eagle Strafing Run.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Eagle 110mm Rocket Pods.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Eagle 110mm Rocket Pods.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Eagle 500kg Bomb.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Eagle 500kg Bomb.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Emancipator Exosuit.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Emancipator Exosuit.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\EMS Mortar Sentry.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\EMS Mortar Sentry.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Epoch.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Epoch.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Expendable Anti-Tank.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Expendable Anti-Tank.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Fast Recon Vehicle.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Fast Recon Vehicle.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Flame Sentry.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Flame Sentry.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Flamethrower.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Flamethrower.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Gas Mines.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Gas Mines.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Gatling Sentry.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Gatling Sentry.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Grenade Launcher.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Grenade Launcher.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Grenadier Battlement.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Grenadier Battlement.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Guard Dog.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Guard Dog.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Guard Dog Breath.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Guard Dog Breath.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Guard Dog K-9.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Guard Dog K-9.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Guard Dog Rover.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Guard Dog Rover.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Heavy Machine Gun.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Heavy Machine Gun.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\HMG Placement.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\HMG Placement.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Hover Pack.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Hover Pack.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Incendiary Mines.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Incendiary Mines.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Jump Pack.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Jump Pack.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Laser Cannon.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Laser Cannon.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Laser Sentry.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Laser Sentry.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Machine Gun.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Machine Gun.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Machine Gun Sentry.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Machine Gun Sentry.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Mortar Sentry.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Mortar Sentry.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital Airburst Strike.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital Airburst Strike.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital EMS Strike.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital EMS Strike.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital Gas Strike.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital Gas Strike.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital Gatling Barrage.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital Gatling Barrage.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital Laser.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital Laser.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital Napalm Barrage.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital Napalm Barrage.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital Precision Strike.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital Precision Strike.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital Railcannon Strike.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital Railcannon Strike.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital Smoke Strike.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital Smoke Strike.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital Walking Barrage.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital Walking Barrage.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital 120mm HE Barrage.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital 120mm HE Barrage.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Orbital 380mm HE Barrage.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Orbital 380mm HE Barrage.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Patriot Exosuit.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Patriot Exosuit.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Quasar Cannon.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Quasar Cannon.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Railgun.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Railgun.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Recoilless Rifle.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Recoilless Rifle.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Rocket Sentry.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Rocket Sentry.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Shield Generator Pack.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Shield Generator Pack.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Shield Generator Relay.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Shield Generator Relay.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Spear.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Spear.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Stalwart.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Stalwart.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Sterilizer.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Sterilizer.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Supply Pack.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Supply Pack.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Tesla Tower.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Tesla Tower.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\W.A.S.P. Launcher.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\W.A.S.P. Launcher.png</Link>
+        </None>
+        <None Update="Resources\StratagemImages\Warp Pack.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <Link>StratagemImages\Warp Pack.png</Link>
+        </None>
+    </ItemGroup>
+
+</Project>
