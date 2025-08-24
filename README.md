@@ -16,3 +16,25 @@ At the loadout screen, after selecting your four stratagems, press LT + RT + Y.
 ### Manually
 
 Click on the loadout stratagem you wish to change, then select from the list that pops up.
+
+# Using Stratagems
+
+Hold LB then press A, B, X, or Y to trigger a loadout stratagem.
+
+For mission stratagems, hold LB + RB then press
+- A for Hellbomb
+- B for Eagle Rearm
+- X for Resupply
+- Y for Reinforcements
+
+# Cooldown
+
+For loadout stratagems, a cooldown is shown when they're triggered.
+
+This cooldown may or may not be accurate!
+
+It is calculated from that you've upgraded you ship fully and throw a stratagem as far as possible.
+
+# Special Weapons
+
+If you have the Epoch equipped, hold LT then press A once. The app will hold the fire button automatically for 2.5 seconds, which will generate the highest damage.
