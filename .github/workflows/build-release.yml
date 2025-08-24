@@ -19,11 +19,11 @@ jobs:
         dotnet-version: '9.0.x'
         
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore ./Helldivers2Accessibility/Helldivers2Accessibility.csproj
       
     - name: Publish application
       run: |
-        dotnet publish `
+        dotnet publish ./Helldivers2Accessibility/Helldivers2Accessibility.csproj `
           --framework net9.0-windows `
           --runtime win-x64 `
           --self-contained true `
