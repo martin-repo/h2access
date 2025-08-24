@@ -45,12 +45,14 @@ jobs:
         name: Helldivers2Accessibility-win-x64
         path: ./Helldivers2Accessibility-win-x64.zip
         
-    # Create a GitHub release with the zip file
-    - name: Create Release
+    # Create/update the latest release with the zip file
+    - name: Update Latest Release
       uses: softprops/action-gh-release@v1
       with:
         files: ./Helldivers2Accessibility-win-x64.zip
-        tag_name: "build-${{ github.run_number }}"
-        name: "Release Build ${{ github.run_number }}"
+        tag_name: "latest"
+        name: "Latest Build"
+        prerelease: false
+        make_latest: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
