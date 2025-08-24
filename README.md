@@ -49,3 +49,9 @@ It is calculated from that you've upgraded you ship fully and throw a stratagem 
 # Special Weapons
 
 If you have the Epoch equipped, hold LT then press A once. The app will hold the fire button automatically for 2.5 seconds, which will generate the highest damage.
+
+# Other
+
+XBOX icons from https://devforum.roblox.com/t/xbox-controller-icons-free-pack/2095806
+
+Mission stratagems icons from https://helldivers.wiki.gg/wiki/Stratagems
