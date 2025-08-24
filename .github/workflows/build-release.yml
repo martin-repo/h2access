@@ -1,0 +1,56 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  build-and-publish:
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup .NET 9
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Publish application
+      run: |
+        dotnet publish `
+          --framework net9.0-windows `
+          --runtime win-x64 `
+          --self-contained true `
+          --configuration Release `
+          --output ./publish `
+          /p:ReadyToRun=true `
+          /p:PublishSingleFile=true `
+          /p:IncludeNativeLibrariesForSelfExtract=true `
+          /p:DebugType=None `
+          /p:DebugSymbols=false
+    
+    - name: Create zip archive
+      run: |
+        Compress-Archive -Path ./publish/* -DestinationPath ./Helldivers2Accessibility-win-x64.zip
+        
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Helldivers2Accessibility-win-x64
+        path: ./Helldivers2Accessibility-win-x64.zip
+        
+    # Create a GitHub release with the zip file
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: ./Helldivers2Accessibility-win-x64.zip
+        tag_name: "build-${{ github.run_number }}"
+        name: "Release Build ${{ github.run_number }}"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
