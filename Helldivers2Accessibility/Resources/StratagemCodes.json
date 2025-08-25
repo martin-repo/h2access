@@ -278,9 +278,9 @@
     ],
     "category": "Supply",
     "position": 33,
-    "deployment": "Ground",
+    "deployment": "Vehicle",
     "deploymentSeconds": 11,
-    "cooldownSeconds": 370
+    "cooldownSeconds": 570
   },
   {
     "name": "EMS Mortar Sentry",
@@ -340,7 +340,7 @@
     ],
     "category": "Supply",
     "position": 32,
-    "deployment": "Ground",
+    "deployment": "Vehicle",
     "deploymentSeconds": 11,
     "cooldownSeconds": 912
   },
@@ -840,9 +840,9 @@
     ],
     "category": "Supply",
     "position": 34,
-    "deployment": "Ground",
+    "deployment": "Vehicle",
     "deploymentSeconds": 11,
-    "cooldownSeconds": 370
+    "cooldownSeconds": 570
   },
   {
     "name": "Quasar Cannon",

@@ -420,6 +420,7 @@ public sealed class StratagemService : IDisposable
 					StratagemDeployment.Weapon => 3,
 					StratagemDeployment.Backpack => 4,
 					StratagemDeployment.Ground => 5,
+					StratagemDeployment.Vehicle => 6,
 					_ => throw new InvalidOperationException()
 				}
 			)
@@ -434,6 +435,11 @@ public sealed class StratagemService : IDisposable
 		AssignSlot(deployment: StratagemDeployment.Orbital, button: ControllerButton.ButtonY);
 
 		// Next backup positions
+		if (remainingButtons.Contains(item: ControllerButton.ButtonA))
+		{
+			AssignSlot(deployment: StratagemDeployment.Vehicle, button: ControllerButton.ButtonA);
+		}
+
 		if (remainingButtons.Contains(item: ControllerButton.ButtonY))
 		{
 			AssignSlot(deployment: StratagemDeployment.Airstrike, button: ControllerButton.ButtonY);

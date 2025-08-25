@@ -12,5 +12,6 @@ public enum StratagemDeployment
 	Airstrike,
 	Weapon,
 	Backpack,
-	Ground
+	Ground,
+	Vehicle
 }
