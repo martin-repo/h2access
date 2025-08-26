@@ -207,11 +207,11 @@ public sealed class StratagemService : IDisposable
 
 		ImmutableHashSet<ControllerButton> screenshotButtons =
 		[
-			ControllerButton.LeftTrigger, ControllerButton.RightTrigger, ControllerButton.ButtonY
+			ControllerButton.LeftTrigger, ControllerButton.RightTrigger, ControllerButton.Back
 		];
 		if (state.Pressed.Intersect(other: screenshotButtons).Count == screenshotButtons.Count &&
 			state.Added.Count == 1 &&
-			state.Added.Single() == ControllerButton.ButtonY)
+			state.Added.Single() == ControllerButton.Back)
 		{
 			Task.Run(action: UpdateCurrentStratagems);
 			return;
@@ -369,6 +369,12 @@ public sealed class StratagemService : IDisposable
 			.Where(predicate: v => _stratagemCodes.ContainsKey(key: v))
 			.ToImmutableArray();
 
+		if (stratagemNames.Length == 0)
+		{
+			// Most likely a screenshot NOT of the loadout stratagems
+			return;
+		}
+
 		if (StratagemLoadout.ExistingSlots.Select(selector: v => v.Name).Intersect(second: stratagemNames).Count() != 4)
 		{
 			// User might have swapped some Stratagem positions, do not overwrite if they are the same (but maybe in different positions)
@@ -377,17 +383,6 @@ public sealed class StratagemService : IDisposable
 
 		StratagemLoadout.ClearAllCooldowns();
 		SaveAndTriggerLoadout();
-
-		// A single press doesn't work for some reason...
-		InputSimulationService.SimulateKeyPress(virtualKeyCode: VirtualKeyCodes.B, press: true);
-		Task.Delay(delay: DelayBeforeKeyUp).GetAwaiter().GetResult();
-		InputSimulationService.SimulateKeyPress(virtualKeyCode: VirtualKeyCodes.B, press: false);
-
-		Task.Delay(millisecondsDelay: 250).GetAwaiter().GetResult();
-
-		InputSimulationService.SimulateKeyPress(virtualKeyCode: VirtualKeyCodes.B, press: true);
-		Task.Delay(delay: DelayBeforeKeyUp).GetAwaiter().GetResult();
-		InputSimulationService.SimulateKeyPress(virtualKeyCode: VirtualKeyCodes.B, press: false);
 	}
 
 	private void UpdateLoadoutFromNames(ImmutableArray<string> stratagemNames)
